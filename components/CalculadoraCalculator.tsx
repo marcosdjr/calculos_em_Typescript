@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../styles/temperaturecalculator.module.scss';
+import styles from '../styles/calculadoracalculator.module.scss';
 import { Typography, Grid, TextField, Button, Card, Radio, RadioGroup, FormControl, FormControlLabel, FormHelperText, FormLabel } from '@material-ui/core';
 import Link from 'next/link';
 
@@ -74,45 +74,36 @@ export default function CalculadoraCalculator() {
                             <FormControl component="fieldset" error={false} >
                                 <FormLabel component="legend">Escolha a operação desejada</FormLabel>
                                 <RadioGroup aria-label="operacao" name="operacao" value={value} onChange={handleRadioChange}>
-                                    <FormControlLabel value="+" control={<Radio />} label="+" />
-                                    <FormControlLabel value="-" control={<Radio />} label="-" />
-                                    <FormControlLabel value="x" control={<Radio />} label="x" />
-                                    <FormControlLabel value="/" control={<Radio />} label="/" />
+                                    <FormControlLabel value="+" control={<Radio />} label="+" className={styles.verde}/>
+                                    <FormControlLabel value="-" control={<Radio />} label="-" className={styles.vermelho}/>
+                                    <FormControlLabel value="x" control={<Radio />} label="x" className={styles.azul}/>
+                                    <FormControlLabel value="/" control={<Radio />} label="/" className={styles.laranja}/>
                                 </RadioGroup>
                                 
-                                <Button type="submit"
-                                    variant="outlined"
-                                    color="primary"
+                                <Grid item className={styles.textfield}>
+                                <Button variant="contained"
+                                color="primary"
+                                fullWidth
                                     onClick={() => conta()} >
                                     Calcular
                                 </Button>
+                                </Grid>
                             </FormControl>
                         </form>
 
                         <div className={styles.result}>
 
-                            <Typography>
+                            <Typography className={styles.result}>
                                 <br />
-                                Resultado: {contao} 
+                                <h4 className={styles.result}>Resultado: {contao} </h4>
                                 <br />
 
                             </Typography>
 
                         </div>
 
-                        <Grid item className={styles.textfield}>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                                onClick={() => calcularKelvin()}
-
-                            >
-                                Calcular
-                            </Button>
-                        </Grid>
-
-
+                                              
+                    
 
                     </div>
 

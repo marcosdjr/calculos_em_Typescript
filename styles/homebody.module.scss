@@ -23,11 +23,7 @@
         .textfield {
             width: 40vmax;
             padding: 0.5rem;
-            :hover {
-                color: red;
-                background-color:rgb(149, 209, 231);
-
-            }
+            
         }
     
 }
@@ -37,33 +33,25 @@
     padding: 1rem;
 }
 
-.tempcard {
+.card {
     padding: 0.5rem;
+    margin-bottom: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
    
       
 }
 
-.result {
-    padding-bottom: 0.1rem;
-    color: purple;
-    
+.image {
+    width: 20%;
+    height: auto;
 }
 
-.azul{
-   color: blue
-   
-}
+.card {
+    padding-bottom: 1rem;
+    :hover {
+        color: red;
+        background-color:rgb(149, 209, 231);
 
-.verde {
-    color: #4caf50;
-}
-
-.laranja {
-    color: #ffc107;
-}
-
-.vermelho {
-    color: #bf360c;
+    }
 }

@@ -32,7 +32,7 @@ export default function () {
             <Container maxWidth={"xs"}>
                 <Grid container direction="column" spacing={2}>
 
-                    <Grid item>
+                    <Grid item className={styles.textfield}>
                         <TextField
                             label="Altura em cm"
                             variant="filled"
@@ -41,7 +41,7 @@ export default function () {
                             onChange={({ target }) => setAltura(Number(target.value))}
                         />
                     </Grid>
-                    <Grid item>
+                    <Grid item className={styles.textfield}>
                         <TextField
                             label="Peso em kg"
                             variant="filled"
@@ -52,8 +52,9 @@ export default function () {
                         />
                     </Grid>
 
-                    <Grid item>
+                    <Grid item className={styles.textfield}>
                         <Button
+                            
                             variant="contained"
                             color="primary"
                             fullWidth
